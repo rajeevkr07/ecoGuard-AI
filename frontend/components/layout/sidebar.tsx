@@ -14,7 +14,6 @@ import {
   Shield,
   ChevronLeft,
   ChevronRight,
-  LogOut,
   Leaf,
   Workflow,
 } from "lucide-react"

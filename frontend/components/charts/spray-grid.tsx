@@ -26,12 +26,6 @@ const CELL_STYLES: Record<CellStatus, string> = {
   sprayed:  "bg-blue-500/60 hover:bg-blue-400 border-blue-600/40",
 }
 
-const LEGEND = [
-  { status: "healthy",  label: "Healthy",  color: "bg-emerald-500", count: 0 },
-  { status: "monitor",  label: "Monitor",  color: "bg-amber-400",   count: 0 },
-  { status: "affected", label: "Affected", color: "bg-red-500",     count: 0 },
-  { status: "sprayed",  label: "Sprayed",  color: "bg-blue-500",    count: 0 },
-]
 
 function countCells(grid: CellStatus[][], status: CellStatus) {
   return grid.flat().filter((c) => c === status).length
@@ -40,7 +34,6 @@ function countCells(grid: CellStatus[][], status: CellStatus) {
 export function SprayGrid() {
   const [grid, setGrid] = useState<CellStatus[][]>(INITIAL_GRID.map(row => [...row]))
   const [sprayMode, setSprayMode] = useState(false)
-  const [tooltip, setTooltip] = useState<{ row: number; col: number } | null>(null)
 
   const toggleCell = (row: number, col: number) => {
     setGrid((prev) => {
@@ -143,8 +136,6 @@ export function SprayGrid() {
             <div
               key={`${rIdx}-${cIdx}`}
               onClick={() => toggleCell(rIdx, cIdx)}
-              onMouseEnter={() => setTooltip({ row: rIdx, col: cIdx })}
-              onMouseLeave={() => setTooltip(null)}
               className={cn(
                 "relative aspect-square rounded-sm border cursor-pointer transition-all duration-150 hover:scale-110 hover:z-10",
                 CELL_STYLES[cell]

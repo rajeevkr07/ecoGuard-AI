@@ -3,18 +3,13 @@
 import React, { useState, useCallback } from "react"
 import Image from "next/image"
 import { PageHeader } from "@/components/dashboard/page-header"
-import { StatusBadge } from "@/components/dashboard/status-badge"
 import { 
   Upload as UploadIcon, 
   ImagePlus, 
   X, 
-  CheckCircle2, 
   Cpu, 
-  AlertTriangle, 
-  Play,
   RotateCcw,
-  Sparkles,
-  Navigation
+  Sparkles
 } from "lucide-react"
 
 interface MockDiagnosticResult {

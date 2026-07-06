@@ -8,9 +8,7 @@ import {
   Sprout,
   Droplet,
   Cpu,
-  ShieldAlert,
   TrendingDown,
-  Leaf,
 } from "lucide-react"
 
 const recentActivity = [

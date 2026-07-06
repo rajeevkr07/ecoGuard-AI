@@ -19,3 +19,6 @@ async def dispatch_spray_drone(farm_id: int, volume_liters: float, coordinates: 
     """
     # Placeholder returning flight command status
     return f"Drone dispatched to farm {farm_id} at {coordinates}. Applying {volume_liters}L of pesticide."
+
+# Expose Starlette app for ASGI runners (e.g. uvicorn)
+app = mcp.sse_app()

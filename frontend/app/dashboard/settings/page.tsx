@@ -2,7 +2,7 @@
 
 import React, { useState } from "react"
 import { PageHeader } from "@/components/dashboard/page-header"
-import { Save, Key, Globe, Bell, Shield, Database } from "lucide-react"
+import { Save, Key, Globe, Bell, Database } from "lucide-react"
 
 interface SettingsSectionProps {
   icon: React.ReactNode

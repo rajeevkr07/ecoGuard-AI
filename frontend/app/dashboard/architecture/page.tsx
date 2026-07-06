@@ -7,9 +7,7 @@ import {
   Cpu, 
   Terminal, 
   Layers, 
-  ArrowRight, 
   CheckCircle2, 
-  Play, 
   Workflow, 
   Code,
   Compass,
@@ -262,7 +260,7 @@ export default function ArchitecturePage() {
 
                   {activeStep === 3 && (
                     <div className="bg-black/45 border border-border/50 rounded-lg p-3 font-mono text-[9px] text-zinc-300">
-                      <p className="text-emerald-500 mb-1">// Google GenAI ADK Invocations</p>
+                      <p className="text-emerald-500 mb-1">{"// Google GenAI ADK Invocations"}</p>
                       <p>response = client.models.generate_content(</p>
                       <p className="pl-4">model=&apos;gemini-2.5-flash&apos;,</p>
                       <p className="pl-4">contents=[leaf_photo, &quot;Identify crop status...&quot;]</p>
@@ -272,10 +270,10 @@ export default function ArchitecturePage() {
 
                   {activeStep === 7 && (
                     <div className="bg-black/45 border border-border/50 rounded-lg p-3 font-mono text-[9px] text-zinc-300">
-                      <p className="text-emerald-500 mb-1">// FastMCP Tool Actuation</p>
-                      <p>@mcp.tool()</p>
-                      <p>async def dispatch_spray_drone(farm_id: int, volume_liters: float, coordinates: str):</p>
-                      <p className="pl-4"># Command drone flight board ...</p>
+                      <p className="text-emerald-500 mb-1">{"// FastMCP Tool Actuation"}</p>
+                      <p>{"@mcp.tool()"}</p>
+                      <p>{"async def dispatch_spray_drone(farm_id: int, volume_liters: float, coordinates: str):"}</p>
+                      <p className="pl-4">{"# Command drone flight board ..."}</p>
                       <p className="pl-4">return f&quot;Drone dispatched to farm...&quot;</p>
                     </div>
                   )}
